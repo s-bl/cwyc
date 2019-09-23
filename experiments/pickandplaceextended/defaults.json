@@ -1,0 +1,61 @@
+{
+  "inherit_from": null,
+  "jobdir": "/tmp/pickandplace",
+  "clean": true,
+  "env": "envs.continuous.pickandplaceextended.pick_and_place:FetchPickAndPlaceEnv",
+
+  "max_env_steps": 5e6,
+  "render": false,
+  "num_worker": 5,
+
+  "env_spec": {
+    "T": 150
+  },
+
+  "env_params": {
+    "reward_type": "sparse",
+    "max_episode_steps": 150
+  },
+
+  "rollout_worker_params": {
+    "early_stopping": false,
+    "resample_goal_every": 5
+  },
+
+  "tasks_specs": [
+    {
+      "mg":[0,1,2],
+      "mo":[0,1,2],
+      "g_dim":3,
+      "th":0.05,
+      "buffer_size":10,
+      "steps_at_target_before_success":1,
+      "reward_type":"sparse",
+      "min_num_steps_for_success": 5
+    },
+    {
+      "mg":[6,7,8],
+      "mo":[9,10,11],
+      "g_dim":3,
+      "th":0.05,
+      "buffer_size":10,
+      "steps_at_target_before_success":1,
+      "reward_type":"sparse",
+      "min_num_steps_for_success": 5
+    },
+    {
+      "mg":[3,4,5],
+      "mo":[3,4,5],
+      "g_dim":3,
+      "th":0.05,
+      "buffer_size":10,
+      "steps_at_target_before_success":1,
+      "reward_type":"sparse",
+      "min_num_steps_for_success": 5
+    }
+  ],
+
+  "task_planner_params": {
+    "max_seq_length": 9
+  }
+}

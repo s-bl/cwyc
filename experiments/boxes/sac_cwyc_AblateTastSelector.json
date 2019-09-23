@@ -1,0 +1,31 @@
+{
+  "inherit_from": "sac",
+  "jobdir": "/tmp/cwyc/results/boxes/cwyc_ablateTaskSelector",
+  "gnet_params": {
+    "network_params": {
+      "net_type": "gnet.models:GnetPairwiseRelations",
+      "excluded_coords": [],
+      "use_bias": true,
+      "beta_trainable": true,
+      "beta_init": 0,
+      "beta_clip": [-2, 3],
+      "noise_stddev": 0.00001,
+      "l1": 0,
+      "l2": 0
+    },
+    "normalizer_params": {
+      "eps": 0.01,
+      "default_clip_range": 5
+    },
+    "normalize": false,
+    "coords_gen_params": {
+      "th": 0.8
+    },
+    "use_switching_reward": true
+  },
+
+  "task_selector_params": {
+    "fixed_Q": [1, 1, 1, 1, 1]
+  }
+
+}

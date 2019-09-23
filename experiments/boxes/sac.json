@@ -1,0 +1,19 @@
+{
+  "inherit_from": "defaults",
+    "policy_params": {
+      "policy_type": "policies.sac.sac:SAC",
+      "buffer_size": 1000000,
+      "batch_size": 64,
+      "lr": 0.0003,
+      "scale_reward": 5,
+      "discount": 0.99,
+      "tau": 0.005,
+      "target_update_interval": 1,
+      "action_prior": "uniform",
+      "reparameterize": true,
+      "train_steps": 200,
+      "q_hidden": [256, 256],
+      "v_hidden": [256, 256],
+      "relative_goals": false
+    }
+}

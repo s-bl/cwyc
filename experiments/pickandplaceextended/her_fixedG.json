@@ -1,0 +1,17 @@
+{
+  "inherit_from": "her",
+  "jobdir": "/tmp/cwyc/results/pickandplaceextended/cwyc_fixedG",
+  "gnet_params": {
+    "network_params": {
+      "net_type": "pickandplace.gnet.models:Simple"
+    }
+  },
+
+  "task_planner_params": {
+    "fixed_Q": [
+      [1, 0, 0],
+      [1, 0, 0],
+      [0, 1, 0]
+    ]
+  }
+}

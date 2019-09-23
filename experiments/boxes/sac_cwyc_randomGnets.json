@@ -1,0 +1,9 @@
+{
+  "inherit_from": "sac",
+  "jobdir": "/tmp/cwyc/results/boxes/cwyc_randomGnets",
+  "gnet_params": {
+    "network_params": {
+      "net_type": "boxes.gnet.models:Random"
+    }
+  }
+}

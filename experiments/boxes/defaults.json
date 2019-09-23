@@ -1,0 +1,96 @@
+{
+  "inherit_from": null,
+  "jobdir": "/tmp/test",
+  "clean": true,
+  "env": "envs.continuous.BallPickUpExtendedObstacles:Ball",
+  "max_env_steps": 15000000,
+  "num_worker": 5,
+  "eval_runs": false,
+
+  "env_spec": {
+    "T": 1600
+  },
+
+  "env_params": {
+    "reward_type": "dense",
+    "max_episode_steps": 1600,
+    "goal_max_dist":  10,
+    "goal_min_dist":  5,
+    "max_dist_boxes":  10,
+    "min_dist_boxes":  5,
+    "distance_threshold": 1.2,
+    "relative_goals": false,
+    "num_prob_objects": 1,
+    "prob_objects_prob": [0.5],
+    "num_random_walk_objects": 1,
+    "num_magic_objects": 0,
+    "num_dynamic_objects": 0,
+    "physical_box": true,
+    "init_pos_noise": 1.0
+  },
+
+  "rollout_worker_params": {
+    "early_stopping": true,
+    "surprise_std_scaling": 5,
+    "resample_goal_every": 5
+  },
+
+  "tasks_specs": [
+    {
+      "mg":[0,1],
+      "mo":[0,1],
+      "g_dim":2,
+      "th":1.0,
+      "buffer_size":10,
+      "steps_at_target_before_success":5,
+      "reward_type":"dense",
+      "min_num_steps_for_success": 5
+    },
+    {
+      "mg":[2,3],
+      "mo":[2,3],
+      "g_dim":2,
+      "th":1.0,
+      "buffer_size":10,
+      "steps_at_target_before_success":5,
+      "reward_type":"dense",
+      "min_num_steps_for_success": 5
+    },
+    {
+      "mg":[4,5],
+      "mo":[4,5],
+      "g_dim":2,
+      "th":1.0,
+      "buffer_size":10,
+      "steps_at_target_before_success":5,
+      "reward_type":"dense",
+      "min_num_steps_for_success": 5
+    },
+    {
+      "mg":[6,7],
+      "mo":[6,7],
+      "g_dim":2,
+      "th":1.0,
+      "buffer_size":10,
+      "steps_at_target_before_success":5,
+      "reward_type":"dense",
+      "min_num_steps_for_success": 5
+    },
+    {
+      "mg":[8,9],
+      "mo":[8,9],
+      "g_dim":2,
+      "th":1.0,
+      "buffer_size":10,
+      "steps_at_target_before_success":5,
+      "reward_type":"dense",
+      "min_num_steps_for_success": 5
+    }
+  ],
+
+  "task_planner_params": {
+    "max_seq_length": 9,
+    "eps_greedy_prob": 0.1
+
+  }
+}

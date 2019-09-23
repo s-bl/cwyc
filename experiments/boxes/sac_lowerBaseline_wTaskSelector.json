@@ -1,0 +1,17 @@
+{
+  "inherit_from": "sac",
+  "jobdir": "/tmp/cwyc/results/boxes/cwyc_lowerBaseline_wTaskSelector",
+  "gnet_params": {
+    "network_params": {
+      "net_type": "gnet.models:Simple"
+    }
+  },
+
+  "task_planner_params": {
+    "fixed_Q": [
+      [1, 0, 0],
+      [0, 1, 0],
+      [0, 0, 1]
+    ]
+  }
+}

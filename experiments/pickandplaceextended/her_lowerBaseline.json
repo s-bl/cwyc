@@ -1,0 +1,21 @@
+{
+  "inherit_from": "her",
+  "jobdir": "/tmp/cwyc/results/pickandplaceextended/cwyc_lowerBaseline",
+  "gnet_params": {
+    "network_params": {
+      "net_type": "gnet.models:Simple"
+    }
+  },
+
+  "task_selector_params": {
+    "fixed_Q": [1, 1, 1]
+  },
+
+  "task_planner_params": {
+    "fixed_Q": [
+      [1, 0, 0],
+      [0, 1, 0],
+      [0, 0, 1]
+    ]
+  }
+}

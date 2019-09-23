@@ -1,0 +1,2 @@
+TRAIN = 0
+EVAL = 1
