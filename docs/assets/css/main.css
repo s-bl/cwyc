@@ -4655,6 +4655,12 @@ sup {
 	/* color: #fff */
 }
 
+.header .site-authors {
+	font-size: 1.5rem;
+	display: block;
+	line-height: 1;
+}
+
 @media only screen and (min-width:768px) {
 	.header .site-title {
 		margin: 0;
