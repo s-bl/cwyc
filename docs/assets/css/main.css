@@ -4851,3 +4851,8 @@ body {
 	margin: 0;
 	color: #fff
 }
+
+.content {
+	width: 50%;
+	margin: auto;
+}
